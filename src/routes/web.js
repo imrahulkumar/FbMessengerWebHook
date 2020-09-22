@@ -9,7 +9,7 @@ let initWebRoutes = (app)=> {
     router.get("/webhook", chatBotController.getWebhook);
     router.post("/webhook", chatBotController.postWebhook);
 
-    return app.use("/", router);
+    return app.use("/webhook", router);
 };
 
 module.exports = initWebRoutes;
